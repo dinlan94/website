@@ -102,39 +102,39 @@
   "categories": [
    {
       "_id": "asd1293uasdads1",
-      "name": "House with beauty backyard",
+      "name": "Things to do",
       "items": [
         {
           "_id": "asd1293uasdads1",
-          "name": "New Ubud House",
-          "imageUrl": "/images/Backyard/b_1.png",
+          "name": "Kopeng",
+          "imageUrl": "/images/DetailPage/t1.png",
           "country": "Indonesia",
-          "city": "Bali",
+          "city": "Yogyakarta",
           "isPopular": false
         },
         {
           "_id": "asd1293uasdads1",
-          "name": "Modern Homestay",
-          "imageUrl": "/images/Backyard/b_2.png",
+          "name": "Ubud Garden",
+          "imageUrl": "/images/DetailPage/t2.png",
           "country": "Indonesia",
           "city": "Magelang",
           "isPopular": false
         },
         {
           "_id": "asd1293uasdads1",
-          "name": "The Sand’s Hotel",
-          "imageUrl": "/images/livingroom/l_2.png",
+          "name": "Parangtritis",
+          "imageUrl": "/images/DetailPage/t3.png",
           "country": "Indonesia",
-          "city": "Lombok",
-          "isPopular": false
+          "city": "Yogyakarta",
+          "isPopular": true
         },
         {
           "_id": "asd1293uasdads1",
-          "name": "Green Villa’s",
-          "imageUrl": "/images/Backyard/b_4.png",
+          "name": "Mount Merbabu",
+          "imageUrl": "/images/DetailPage/t4.png",
           "country": "Indonesia",
-          "city": "Bogor",
-          "isPopular": true
+          "city": "Boyolali",
+          "isPopular": false
         }
       ]
     }
