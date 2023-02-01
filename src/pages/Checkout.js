@@ -53,7 +53,7 @@ export default class Checkout extends Component {
         }
 
         const steps = {
-            BookingInformation: {
+            bookingInformation: {
                 title: "Booking Information",
                 description: "Pleasi fill up the bank fields below",
                 content: (
@@ -111,7 +111,7 @@ export default class Checkout extends Component {
                                             data.phone !== "" && (
                                                 <Fade>
                                                     <Button
-                                                        className="btn mb-3"
+                                                        className="btn mb-4"
                                                         type="button"
                                                         isBlock
                                                         isPrimary
