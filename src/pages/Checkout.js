@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Header from 'parts/Header';
-import { Fade } from 'react-reveal';
+import Fade from 'react-reveal';
 
 
 import Button from 'elements/Button';
@@ -104,41 +104,37 @@ export default class Checkout extends Component {
                                 <MainContent data={steps} current={CurrentStep} />
 
                                 {CurrentStep === "bookingInformation" && (
-                                    <Fade>
-                                        <Controller>
-                                            {data.firstName !== "" &&
-                                                data.lastName !== "" &&
-                                                data.email !== "" &&
-                                                data.phone !== "" && (
-                                                    <Fade>
-                                                        <Button
-                                                            className='btn mb-3'
-                                                            type="button"
-                                                            isBlock
-                                                            isPrimary
-                                                            hasShadow
-                                                            onClick={nextStep}
-                                                        >
-                                                            Continue to Book
-                                                        </Button>
-                                                    </Fade>
-                                                )
-                                            }
-                                            <Button
-                                                className="btn"
-                                                type='link'
-                                                isBlock
-                                                isLight
-                                                href={`/properties/${ItemDetails._id}`}
-                                            >
-                                                Cancel
-                                            </Button>
-                                        </Controller>
-                                    </Fade>
+                                    <Controller>
+                                        {data.firstName !== "" &&
+                                            data.lastName !== "" &&
+                                            data.email !== "" &&
+                                            data.phone !== "" && (
+                                                <Fade>
+                                                    <Button
+                                                        className="btn mb-3"
+                                                        type="button"
+                                                        isBlock
+                                                        isPrimary
+                                                        hasShadow
+                                                        onClick={nextStep}
+                                                    >
+                                                        Continue to Book
+                                                    </Button>
+                                                </Fade>
+                                            )}
+                                        <Button
+                                            className="btn"
+                                            type="link"
+                                            isBlock
+                                            isLight
+                                            href={`/properties/${ItemDetails._id}`}
+                                        >
+                                            Cancel
+                                        </Button>
+                                    </Controller>
                                 )}
 
                                 {CurrentStep === "payment" && (
-                                    <Fade>
                                         <Controller>
                                             {data.proofPayment !== "" &&
                                                 data.bankName !== "" &&
@@ -167,7 +163,6 @@ export default class Checkout extends Component {
                                                 Cancel
                                             </Button>
                                         </Controller>
-                                    </Fade>
                                 )}
 
                                 {CurrentStep === "completed" && (

@@ -62,7 +62,7 @@ export default function Payment(props) {
                             />
 
                             <label htmlFor='bankName'>Asal Bank</label>
-                            <InputFile
+                            <InputText
                                 id="bankName"
                                 name="bankName"
                                 type="text"
@@ -71,7 +71,7 @@ export default function Payment(props) {
                             />
 
                             <label htmlFor='bankHolder'>Nama Pengirim</label>
-                            <InputFile
+                            <InputText
                                 id="bankHolder"
                                 name="bankHolder"
                                 type="text"

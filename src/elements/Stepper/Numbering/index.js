@@ -1,13 +1,13 @@
-import React from 'react';
-import { Fade } from 'react-reveal';
-import propTypes from 'prop-types';
+import React from "react";
+
+import Fade from "react-reveal/Fade";
+
+import propTypes from "prop-types";
 
 import "./index.scss";
 
 export default function Numbering({ style, className, data, current }) {
-
     const KeysOfData = Object.keys(data);
-
     return (
         <Fade>
             <ol className={["stepper", className].join(" ")} style={style}>
@@ -33,4 +33,4 @@ Numbering.propTypes = {
     className: propTypes.string,
     data: propTypes.object,
     current: propTypes.string,
-}
+};
