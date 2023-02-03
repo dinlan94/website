@@ -141,7 +141,7 @@ export default class Checkout extends Component {
                                                 data.bankHolder !== "" && (
                                                     <Fade>
                                                         <Button
-                                                            className='btn mb-3'
+                                                            className='btn mb-4'
                                                             type="button"
                                                             isBlock
                                                             isPrimary
