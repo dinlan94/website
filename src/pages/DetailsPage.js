@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Fade } from 'react-reveal';
+import { connect } from 'react-redux';
 
 import Header from 'parts/Header';
 import PageDetailTitle from 'parts/PageDetailTitle';
@@ -10,9 +12,10 @@ import Testimony from 'parts/Testimony';
 import Footer from 'parts/Footer';
 
 import ItemDetails from "json/itemDetails.json";
-import { Fade } from 'react-reveal';
 
-export default class DetailsPage extends Component {
+import { checkoutBooking } from 'store/actions/checkout';
+
+class DetailsPage extends Component {
 
     componentDidMount() {
         window.title = "Details Page";
@@ -41,7 +44,7 @@ export default class DetailsPage extends Component {
                         </div>
                         <div className="col-5">
                             <Fade bottom>
-                                <BookingForm itemDetails={ItemDetails} />
+                                <BookingForm itemDetails={ItemDetails} startBooking={this.props.checkoutBooking} />
                             </Fade>
                         </div>
                     </div>
@@ -54,3 +57,11 @@ export default class DetailsPage extends Component {
         );
     }
 }
+
+const mapStateToProps = (state) => ({
+    page: state.page,
+});
+
+export default connect(mapStateToProps, { checkoutBooking })(
+    DetailsPage
+);
