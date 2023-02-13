@@ -1,5 +1,5 @@
 import React from 'react';
-import { Fade } from 'react-reveal';
+import Fade from 'react-reveal';
 
 import ImageHero from "assets/images/img-hero.jpg";
 import ImageHero_ from "assets/images/img-hero-frame.jpg";

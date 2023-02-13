@@ -80,7 +80,7 @@ class BookingForm extends Component {
 
     render() {
         const { data } = this.state;
-        const { itemDetails, startBooking } = this.props;
+        const { itemDetails } = this.props;
 
 
         return (

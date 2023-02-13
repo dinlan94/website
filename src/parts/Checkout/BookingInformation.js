@@ -1,5 +1,5 @@
 import React from 'react';
-import { Fade } from 'react-reveal';
+import Fade from 'react-reveal';
 
 import { InputText } from 'elements/Form';
 
@@ -17,14 +17,14 @@ export default function BookingInformation(props) {
                                 <figure className="image-wrapper" style={{ height: 270 }}>
                                     <img
                                         className='img-cover'
-                                        src={ItemDetails.imageUrls[0].url}
+                                        src={`${process.env.REACT_APP_HOST}/${ItemDetails.imageId[0].imageUrl}`}
                                         alt={ItemDetails.name}
                                     />
                                 </figure>
                                 <div className="row align-items-center">
                                     <div className="col">
                                         <div className="meta-wrapper">
-                                            <h5>{ItemDetails.name}</h5>
+                                            <h5>{ItemDetails.title}</h5>
                                             <span className="text-gray-500">
                                                 {ItemDetails.city}, {ItemDetails.country}
                                             </span>

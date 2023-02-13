@@ -1,5 +1,5 @@
 import React from 'react';
-import { Fade } from 'react-reveal';
+import Fade from 'react-reveal';
 
 import TestimonyAccent from 'assets/images/testimonial/testi1frame.jpg';
 

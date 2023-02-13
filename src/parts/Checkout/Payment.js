@@ -1,7 +1,7 @@
-import React from 'react';
-import { Fade } from 'react-reveal';
+import React from "react";
+import Fade from "react-reveal/Fade";
 
-import { InputText, InputFile } from 'elements/Form';
+import { InputText, InputFile } from "elements/Form";
 
 import logoBca from "assets/images/logo-bca.jpg";
 import logoMandiri from "assets/images/logo-mandiri.jpg";
@@ -19,7 +19,7 @@ export default function Payment(props) {
                 <div className="row justify-content-center align-items-center">
                     <div className="col-5 border-right py-5" style={{ paddingRight: 80 }}>
                         <Fade delay={300}>
-                            <p className="mb-4">Transfer Pembayaran</p>
+                            <p className="mb-4">Transfer Pembayaran:</p>
                             <p>Tax: {tax}%</p>
                             <p>Sub total: ${subTotal} USD</p>
                             <p>Total: ${grandTotal} USD</p>
@@ -52,7 +52,7 @@ export default function Payment(props) {
                     </div>
                     <div className="col-5 py-5" style={{ paddingLeft: 80 }}>
                         <Fade delay={600}>
-                            <label htmlFor='proofPayment'>Upload Bukti Transfer</label>
+                            <label htmlFor="proofPayment">Upload Bukti Transfer</label>
                             <InputFile
                                 accept="image/*"
                                 id="proofPayment"
@@ -61,7 +61,7 @@ export default function Payment(props) {
                                 onChange={props.onChange}
                             />
 
-                            <label htmlFor='bankName'>Asal Bank</label>
+                            <label htmlFor="bankName">Asal Bank</label>
                             <InputText
                                 id="bankName"
                                 name="bankName"
@@ -70,7 +70,7 @@ export default function Payment(props) {
                                 onChange={props.onChange}
                             />
 
-                            <label htmlFor='bankHolder'>Nama Pengirim</label>
+                            <label htmlFor="bankHolder">Nama Pengirim</label>
                             <InputText
                                 id="bankHolder"
                                 name="bankHolder"
