@@ -44,14 +44,14 @@ class DetailsPage extends Component {
                 <Header {...this.props} />
                 <PageDetailTitle breadcrumb={breadcrumb} data={page[match.params.id]} />
                 <FeaturedImage data={page[match.params.id].imageId} />
-                <section className="container">
-                    <div className="row">
-                        <div className="col-7 pr-5">
+                <section className="container mx-auto sm:px-4">
+                    <div className="flex flex-wrap ">
+                        <div className="w-3/5 pr-5">
                             <Fade bottom>
                                 <PageDetailDescription data={page[match.params.id]} />
                             </Fade>
                         </div>
-                        <div className="col-5">
+                        <div className="w-2/5">
                             <Fade bottom>
                                 <BookingForm
                                     itemDetails={page[match.params.id]}

@@ -84,7 +84,7 @@ class BookingForm extends Component {
 
 
         return (
-            <div className='card bordered' style={{ padding: '60px 80px' }}>
+            <div className='relative flex flex-col min-w-0 rounded break-words border bg-white border-1 border-gray-300 bordered' style={{ padding: '60px 80px' }}>
                 <h4 className="mb-3">Start Booking</h4>
                 <h5 className="h2 text-teal mb-4">
                     ${itemDetails.price}{" "}
@@ -120,7 +120,7 @@ class BookingForm extends Component {
                 </h6>
 
                 <Button
-                    className="btn"
+                    className="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline"
                     type="link"
                     hasShadow
                     isPrimary

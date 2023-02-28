@@ -5,10 +5,10 @@ import Breadcrumb from "elements/Breadcrumb";
 
 export default function PageDetailTitle({ data, breadcrumb }) {
     return (
-        <section className="container spacing-sm">
+        <section className="container mx-auto sm:px-4 spacing-sm">
             <Fade bottom>
-                <div className="row align-items-center">
-                    <div className="col">
+                <div className="flex flex-wrap  items-center">
+                    <div className="relative flex-grow max-w-full flex-1 px-4">
                         <Breadcrumb data={breadcrumb} />
                     </div>
                     <div className="col-auto text-center">
@@ -17,7 +17,7 @@ export default function PageDetailTitle({ data, breadcrumb }) {
                             {data.city}, {data.country}
                         </span>
                     </div>
-                    <div className="col"></div>
+                    <div className="relative flex-grow max-w-full flex-1 px-4"></div>
                 </div>
             </Fade>
         </section>

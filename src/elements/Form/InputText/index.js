@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import propTypes from "prop-types";
 
-import "./index.scss";
 
 export default function Text(props) {
   const {
@@ -43,7 +42,7 @@ export default function Text(props) {
 
   return (
     <div className={["input-text mb-3", outerClassName].join(" ")}>
-      <div className="input-group">
+      <div className="relative flex items-stretch w-full">
         {prepend && (
           <div className="input-group-prepend bg-gray-900">
             <span className="input-group-text">{prepend}</span>

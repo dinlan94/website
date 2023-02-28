@@ -7,7 +7,7 @@ export default function Activities({ data }) {
   if (data.length === 0) return null;
 
   return (
-    <section className="container">
+    <section className="container mx-auto sm:px-4">
       <Fade bottom>
         <h4 className="mb-3 font-weight-medium">Activities</h4>
         <div className="container-grid">
@@ -18,7 +18,7 @@ export default function Activities({ data }) {
                 key={`activity-item-${index2}`}
               >
                 <Fade bottom delay={300 * index2}>
-                  <div className="card">
+                  <div className="relative flex flex-col min-w-0 rounded break-words border bg-white border-1 border-gray-300">
                     {item.isPopular && (
                       <div className="tag">
                         Popular{" "}
@@ -40,7 +40,7 @@ export default function Activities({ data }) {
                       <Button
                         type="link"
                         href={`/properties/${item._id}`}
-                        className="stretched-link d-block text-gray-800"
+                        className="stretched-link block text-gray-800"
                       >
                         <h5 className="h4">{item.name}</h5>
                       </Button>

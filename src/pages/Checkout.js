@@ -77,16 +77,16 @@ class Checkout extends Component {
 
         if (!checkout)
             return (
-                <div className="container">
+                <div className="container mx-auto sm:px-4">
                     <div
-                        className="row align-items-center justify-content-center text-center"
+                        className="flex flex-wrap  items-center justify-center text-center"
                         style={{ height: "100vh" }}
                     >
-                        <div className="col-3">
+                        <div className="w-1/4">
                             Pilih kamar dulu
                             <div>
                                 <Button
-                                    className="btn mt-5"
+                                    className="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline mt-5"
                                     type="button"
                                     onClick={() => this.props.history.goBack()}
                                     isLight
@@ -158,7 +158,7 @@ class Checkout extends Component {
                                             data.phone !== "" && (
                                                 <Fade>
                                                     <Button
-                                                        className="btn mb-4"
+                                                        className="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline mb-4"
                                                         type="button"
                                                         isBlock
                                                         isPrimary
@@ -170,7 +170,7 @@ class Checkout extends Component {
                                                 </Fade>
                                             )}
                                         <Button
-                                            className="btn"
+                                            className="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline"
                                             type="link"
                                             isBlock
                                             isLight
@@ -188,7 +188,7 @@ class Checkout extends Component {
                                             data.bankHolder !== "" && (
                                                 <Fade>
                                                     <Button
-                                                        className='btn mb-4'
+                                                        className='inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline mb-4'
                                                         type="button"
                                                         isBlock
                                                         isPrimary
@@ -201,7 +201,7 @@ class Checkout extends Component {
                                             )
                                         }
                                         <Button
-                                            className="btn"
+                                            className="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline"
                                             type='button'
                                             isBlock
                                             isLight
@@ -215,7 +215,7 @@ class Checkout extends Component {
                                 {CurrentStep === "completed" && (
                                     <Controller>
                                         <Button
-                                            className='btn'
+                                            className='inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline'
                                             type='link'
                                             isBlock
                                             isPrimary

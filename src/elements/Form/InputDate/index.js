@@ -3,7 +3,6 @@ import propTypes from "prop-types";
 
 import { DateRange } from "react-date-range";
 
-import "./index.scss";
 import "react-date-range/dist/styles.css"; // main css file
 import "react-date-range/dist/theme/default.css"; // theme css file
 
@@ -51,7 +50,7 @@ export default function Date(props) {
             ref={refDate}
             className={["input-date mb-3", props.outerClassName].join(" ")}
         >
-            <div className="input-group">
+            <div className="relative flex items-stretch w-full">
                 <div className="input-group-prepend bg-gray-900">
                     <span className="input-group-text">
                         <img src={iconCalendar} alt="icon calendar" />
@@ -60,7 +59,7 @@ export default function Date(props) {
                 <input
                     readOnly
                     type="text"
-                    className="form-control"
+                    className="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded"
                     value={displayDate}
                     placeholder={placeholder}
                     onClick={() => setIsShowed(!isShowed)}
