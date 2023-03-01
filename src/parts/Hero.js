@@ -17,10 +17,10 @@ export default function Hero(props) {
 
     return (
         <Fade bottom>
-            <section className="container mx-auto sm:px-4 pt-4">
-                <div className="flex flex-wrap  items-center">
+            <section className="container pt-4">
+                <div className="row align-items-center">
                     <div className="col-auto pr-5" style={{ width: 560 }}>
-                        <h1 className="font-bold line-height-1 mb-3">
+                        <h1 className="font-weight-bold line-height-1 mb-3">
                             Forget Busy Work, <br />
                             Start Next Vacation
                         </h1>
@@ -30,16 +30,16 @@ export default function Hero(props) {
                             Your money can return but your time is not.
                         </p>
 
-                        {<Button className="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline px-5" hasShadow isPrimary onClick={showMostPicked}>
+                        {<Button className="btn px-5" hasShadow isPrimary onClick={showMostPicked}>
                             Show Me Now
                         </Button>}
 
-                        <div className="flex flex-wrap " style={{ marginTop: 80 }}>
+                        <div className="row" style={{ marginTop: 80 }}>
                             <div className="col-auto" style={{ marginRight: 35 }}>
                                 <img
                                     width="36"
                                     height="36"
-                                    src="images/Icons/Icon_Traveler.svg"
+                                    src="images/Icons/Icon_Traveler.svg" 
                                     alt={`${props.data.travelers} Travelers`} />
                                 <h6 className="mt-3">
                                     {formatNumber(props.data.travelers)}{" "}
@@ -50,7 +50,7 @@ export default function Hero(props) {
                                 <img
                                     width="36"
                                     height="36"
-                                    src="images/Icons/Icon_Treasury.svg"
+                                    src="images/Icons/Icon_Treasury.svg"  
                                     alt={`${props.data.treasury} Treasury`} />
                                 <h6 className="mt-3">
                                     {formatNumber(props.data.treasury)}{" "}
@@ -61,7 +61,7 @@ export default function Hero(props) {
                                 <img
                                     width="36"
                                     height="36"
-                                    src="images/Icons/Icon_Cities.svg"
+                                    src="images/Icons/Icon_Cities.svg" 
                                     alt={`${props.data.cities} Cities`} />
                                 <h6 className="mt-3">
                                     {formatNumber(props.data.cities)}{" "}
@@ -71,18 +71,18 @@ export default function Hero(props) {
                         </div>
                     </div>
 
-                    <div className="w-1/2 pl-5">
+                    <div className="col-6 pl-5">
                         <div style={{ width: 530, height: 400 }}>
                             <img
                                 src={ImageHero}
                                 alt="House in mountain"
-                                className="max-w-full h-auto absolute"
+                                className="img-fluid position-absolute"
                                 style={{ margin: '-30px 0 0 -30px ', zIndex: 1 }}
                             />
                             <img
                                 src={ImageHero_}
                                 alt="House in mountain frame"
-                                className="max-w-full h-auto absolute"
+                                className="img-fluid position-absolute"
                                 style={{ margin: '0 -15px -15px 0 ' }}
                             />
                         </div>

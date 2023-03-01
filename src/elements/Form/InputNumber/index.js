@@ -1,6 +1,7 @@
 import React from 'react';
 import propsTypes from "prop-types";
 
+import "./index.scss";
 
 export default function Number(props) {
 
@@ -9,7 +10,7 @@ export default function Number(props) {
     const onChange = (e) => {
         let value = String(e.target.value);
 
-        if (+value <= max && +value >= min) {
+        if ( +value <= max && +value >= min) {
             props.onChange({
                 target: {
                     name: name,
@@ -41,7 +42,7 @@ export default function Number(props) {
 
     return (
         <div className={["input-number mb-3", props.outerClassName].join(" ")}>
-            <div className="relative flex items-stretch w-full">
+            <div className="input-group">
                 <div className="input-group-pepend">
                     <span className="input-group-text minus" onClick={minus}>
                         -
@@ -52,7 +53,7 @@ export default function Number(props) {
                     max={max}
                     name={name}
                     readOnly
-                    className='block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 rounded'
+                    className='form-control'
                     placeholder={placeholder ? placeholder : "0"}
                     value={`${prefix}${value}${suffix}${isSuffixPlurar && value > 1 ? "s" : ""}`}
                     onChange={onChange}

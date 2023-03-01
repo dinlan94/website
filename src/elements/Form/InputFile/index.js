@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import propTypes from "prop-types";
 
+import "./index.scss";
 
 export default function File(props) {
     const [FileName, setFileName] = useState("");
@@ -28,7 +29,7 @@ export default function File(props) {
 
     return (
         <div className={["input-text mb-3", outerClassName].join(" ")}>
-            <div className="relative flex items-stretch w-full">
+            <div className="input-group">
                 {prepend && (
                     <div className="input-group-prepend bg-gray-900">
                         <span className="input-group-text">{prepend}</span>
@@ -38,7 +39,7 @@ export default function File(props) {
                     accept={accept}
                     ref={refInputFile}
                     name={name}
-                    className="hidden"
+                    className="d-none"
                     type="file"
                     value={FileName}
                     onChange={onChange}

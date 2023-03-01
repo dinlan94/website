@@ -9,11 +9,11 @@ export default function BookingInformation(props) {
 
     return (
         <Fade>
-            <div className="container mx-auto sm:px-4" style={{ marginBottom: 30 }}>
-                <div className="flex flex-wrap  justify-contetn-center items-center">
-                    <div className="w-2/5 border-right-py-5" style={{ paddingRight: 80 }}>
+            <div className="container" style={{ marginBottom: 30 }}>
+                <div className="row justify-contetn-center align-items-center">
+                    <div className="col-5 border-right-py-5" style={{ paddingRight: 80 }}>
                         <Fade delay={300}>
-                            <div className="relative flex flex-col min-w-0 rounded break-words border bg-white border-1 border-gray-300">
+                            <div className="card">
                                 <figure className="image-wrapper" style={{ height: 270 }}>
                                     <img
                                         className='img-cover'
@@ -21,8 +21,8 @@ export default function BookingInformation(props) {
                                         alt={ItemDetails.name}
                                     />
                                 </figure>
-                                <div className="flex flex-wrap  items-center">
-                                    <div className="relative flex-grow max-w-full flex-1 px-4">
+                                <div className="row align-items-center">
+                                    <div className="col">
                                         <div className="meta-wrapper">
                                             <h5>{ItemDetails.title}</h5>
                                             <span className="text-gray-500">
@@ -42,7 +42,7 @@ export default function BookingInformation(props) {
                             </div>
                         </Fade>
                     </div>
-                    <div className="w-2/5 py-5" style={{ paddingLeft: 80 }}>
+                    <div className="col-5 py-5" style={{ paddingLeft: 80 }}>
                         <Fade delay={600}>
                             <label htmlFor='firstName'>First Name</label>
                             <InputText

@@ -15,19 +15,19 @@ export default function Payment(props) {
 
     return (
         <Fade>
-            <div className="container mx-auto sm:px-4" style={{ marginBottom: 30 }}>
-                <div className="flex flex-wrap  justify-center items-center">
-                    <div className="w-2/5 border-r py-5" style={{ paddingRight: 80 }}>
+            <div className="container" style={{ marginBottom: 30 }}>
+                <div className="row justify-content-center align-items-center">
+                    <div className="col-5 border-right py-5" style={{ paddingRight: 80 }}>
                         <Fade delay={300}>
                             <p className="mb-4">Transfer Pembayaran:</p>
                             <p>Tax: {tax}%</p>
                             <p>Sub total: ${subTotal} USD</p>
                             <p>Total: ${grandTotal} USD</p>
-                            <div className="flex flex-wrap  mt-4">
-                                <div className="w-1/4 text-right">
+                            <div className="row mt-4">
+                                <div className="col-3 text-right">
                                     <img src={logoBca} alt="bank central asia" width="60" />
                                 </div>
-                                <div className="relative flex-grow max-w-full flex-1 px-4">
+                                <div className="col">
                                     <dl>
                                         <dd>Bank Central Asia</dd>
                                         <dd>9542 3365</dd>
@@ -36,11 +36,11 @@ export default function Payment(props) {
                                 </div>
                             </div>
 
-                            <div className="flex flex-wrap ">
-                                <div className="w-1/4 text-right">
+                            <div className="row">
+                                <div className="col-3 text-right">
                                     <img src={logoMandiri} alt="mandiri" width="60" />
                                 </div>
-                                <div className="relative flex-grow max-w-full flex-1 px-4">
+                                <div className="col">
                                     <dl>
                                         <dd>Bank Mandiri</dd>
                                         <dd>9542 3365</dd>
@@ -50,7 +50,7 @@ export default function Payment(props) {
                             </div>
                         </Fade>
                     </div>
-                    <div className="w-2/5 py-5" style={{ paddingLeft: 80 }}>
+                    <div className="col-5 py-5" style={{ paddingLeft: 80 }}>
                         <Fade delay={600}>
                             <label htmlFor="proofPayment">Upload Bukti Transfer</label>
                             <InputFile

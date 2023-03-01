@@ -5,6 +5,7 @@ import LandingPage from 'pages/LandingPage';
 import DetailsPage from 'pages/DetailsPage';
 import Checkout from 'pages/Checkout';
 
+import "assets/scss/style.scss";
 
 function App() {
   return (

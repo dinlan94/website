@@ -3,7 +3,7 @@ import Fade from "react-reveal/Fade";
 
 export default function FeaturedImage({ data }) {
     return (
-        <section className="container mx-auto sm:px-4">
+        <section className="container">
             <div className="container-grid sm">
                 {data.map((item, index) => {
                     return (
@@ -13,7 +13,7 @@ export default function FeaturedImage({ data }) {
                                 }`}
                         >
                             <Fade bottom delay={300 * index}>
-                                <div className="relative flex flex-col min-w-0 rounded break-words border bg-white border-1 border-gray-300 h-full">
+                                <div className="card h-100">
                                     <figure className="img-wrapper">
                                         <img
                                             className="img-cover"

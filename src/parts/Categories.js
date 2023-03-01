@@ -8,7 +8,7 @@ export default function Categories({ data }) {
         if (category.itemId.length === 0) return null;
 
         return (
-            <section className="container mx-auto sm:px-4" key={`category-${index1}`}>
+            <section className="container" key={`category-${index1}`}>
                 <Fade bottom>
                     <h4 className="mb-3 font-weight-medium">{category.name}</h4>
                     <div className="container-grid">
@@ -19,7 +19,7 @@ export default function Categories({ data }) {
                                     key={`category-${index1}-item-${index2}`}
                                 >
                                     <Fade bottom delay={300 * index2}>
-                                        <div className="relative flex flex-col min-w-0 rounded break-words border bg-white border-1 border-gray-300">
+                                        <div className="card">
                                             {item.isPopular && (
                                                 <div className="tag">
                                                     Popular{" "}
@@ -41,7 +41,7 @@ export default function Categories({ data }) {
                                                 <Button
                                                     type="link"
                                                     href={`/properties/${item._id}`}
-                                                    className="stretched-link block text-gray-800"
+                                                    className="stretched-link d-block text-gray-800"
                                                 >
                                                     <h5 className="h4">{item.title}</h5>
                                                 </Button>
